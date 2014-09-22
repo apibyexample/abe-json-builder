@@ -2,20 +2,33 @@
   "name": "abe-json-builder",
   "version": "0.1.0",
   "description": "Strips ABE spec files to JSON files containing response body only.",
-  "main": "src/index.js",
+  "main": "src/abe-json-builder.js",
   "scripts": {
     "test": "grunt test"
   },
+  "keywords": [
+      "abe",
+      "mocks",
+      "json"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/apibyexample/abe-json-builder.git"
   },
-  "author": "Rockabox <tech@rockabox.com> (http://rockabox.com)",
+  "author": [
+    "API By Example <apibyexample@gmail.com>",
+    "Nick White <nickswhite89@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apibyexample/abe-json-builder/issues"
   },
   "homepage": "https://github.com/apibyexample/abe-json-builder",
+  "dependencies": {
+    "colours": "~0.6.0-2",
+    "glob": "~4.0.6",
+    "lodash-node": "~2.4.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",
