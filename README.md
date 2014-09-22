@@ -63,3 +63,32 @@ Would be converted into two different files (using the file name and the example
     "payload": "Another Sample"
 }
 ```
+
+## Usage
+
+It is expected that you are using ABE Spec's for this node module to be used, to
+take a look at the Spec's take a look at the repo [here](https://github.com/apibyexample/abe-spec).
+
+``npm install --save-dev abe-json-builder``
+
+You will need to run the JSON Builder prior to running your tests and/or server.
+
+Example usage (file name createfeed.js):
+
+```js
+var createFeeds = require('abe-json-builder'),
+    options = {
+        'verbose': false,
+        'location': 'myApp/mocks/**/*',
+        'build': 'www/dist/json/'
+    };
+
+createFeeds.jsonBuilder(options);
+
+```
+
+To execute you would then need to run
+
+``node createfeed.js``
+
+A suggestion would be to add this to your ``package.json`` as a script command.
