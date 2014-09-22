@@ -26,7 +26,7 @@ exports.jsonBuilder = function (options) {
             // Check that the JSON passed to the function has examples / matches
             // ABE Spec
             if (!lodash.has(json, 'examples')) {
-                return errors['NOT_ABE'];
+                return errors.NOT_ABE;
             }
 
             var folderArr = path.dirname(match).split('/'),
