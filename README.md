@@ -79,7 +79,7 @@ take a look at the Spec's take a look at the repo [here](https://github.com/apib
 
 You will need to run the JSON Builder prior to running your tests and/or server.
 
-Example usage (file name createfeed.js):
+Example usage (file name createFeeds.js):
 
 ```js
 var createFeeds = require('abe-json-builder'),
@@ -95,6 +95,6 @@ createFeeds.jsonBuilder(options);
 
 To execute you would then need to run
 
-``node createfeed.js``
+``node createFeeds.js``
 
 A suggestion would be to add this to your ``package.json`` as a script command.
