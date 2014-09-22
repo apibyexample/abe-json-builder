@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
     'use strict';
-    grunt.loadNpmTasks('grunt-jscs');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+
     grunt.initConfig({
         jscs: {
             src: [
@@ -16,9 +15,13 @@ module.exports = function (grunt) {
             ]
         }
     });
+
+    require('load-grunt-tasks')(grunt);
+
     grunt.registerTask('lint', [
         'jshint:src',
         'jscs:src'
     ]);
+
     grunt.registerTask('test', ['lint']);
 };
