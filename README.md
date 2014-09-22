@@ -1,3 +1,9 @@
+[![Build Status](http://img.shields.io/travis/apibyexample/abe-json-builder/master.svg)](https://travis-ci.org/apibyexample/abe-json-builder)
+[![Dependency Status](https://david-dm.org/apibyexample/abe-json-builder/dev-status.svg)](https://david-dm.org/apibyexample/abe-json-builder#info=devDependencies)
+[![devDependency Status](https://david-dm.org/apibyexample/abe-json-builder/status.svg)](https://david-dm.org/apibyexample/abe-json-builder#info=dependencies)
+[![Monthly downloads](http://img.shields.io/npm/dm/abe-json-builder.svg)](https://www.npmjs.org/package/abe-json-builder)
+[![License](http://img.shields.io/npm/l/abe-json-builder.svg)](https://www.npmjs.org/package/abe-json-builder)
+
 abe-json-builder
 ================
 
