@@ -5,7 +5,7 @@ var colors = require('colours'),
     lodash = require('lodash-node'),
     fs = require('fs'),
     errors = {
-        'NOT_ABE': 'This files isn\'t valid ABE JSON format'
+        'NOT_ABE': 'This file isn\'t valid ABE JSON format'
     },
     opt = {
         'verbose': false,
