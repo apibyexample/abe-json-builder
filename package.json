@@ -2,7 +2,7 @@
   "name": "abe-json-builder",
   "version": "0.1.0",
   "description": "Strips ABE spec files to JSON files containing response body only.",
-  "main": "src/index.js",
+  "main": "src/abe-json-builder.js",
   "scripts": {
     "test": "grunt test"
   },
