@@ -6,11 +6,19 @@
   "scripts": {
     "test": "grunt test"
   },
+  "keywords": [
+      "abe",
+      "mocks",
+      "json"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/apibyexample/abe-json-builder.git"
   },
-  "author": "Rockabox <tech@rockabox.com> (http://rockabox.com)",
+  "author": [
+    "API By Example <apibyexample@gmail.com>",
+    "Nick White <nickswhite89@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apibyexample/abe-json-builder/issues"
