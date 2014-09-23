@@ -7,9 +7,9 @@
     "test": "grunt test"
   },
   "keywords": [
-      "abe",
-      "mocks",
-      "json"
+    "abe",
+    "mocks",
+    "json"
   ],
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-jscs": "~0.7.1",
-    "load-grunt-tasks": "~0.6.0"
+    "load-grunt-tasks": "~0.6.0",
+    "mkdirp": "~0.5.0"
   }
 }
