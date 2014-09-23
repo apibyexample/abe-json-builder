@@ -1,11 +1,12 @@
 var colors = require('colours'),
+    fs = require('fs'),
     glob = require('glob'),
+    lodash = require('lodash-node'),
+    mkdirp = require('mkdirp'),
     path = require('path'),
     util = require('util'),
-    lodash = require('lodash-node'),
-    fs = require('fs'),
     errors = {
-        'NOT_ABE': 'This file isn\'t valid ABE JSON format'
+        'NOT_ABE': 'This file is an invalid ABE JSON format'
     },
     opt = {
         'verbose': false,
@@ -35,7 +36,7 @@ exports.jsonBuilder = function (options) {
                 baseName = path.basename(match, '.json');
 
             if (!fs.existsSync(filePath)) {
-                fs.mkdir(filePath, function (err) {
+                mkdirp(filePath, function (err) {
                     if (err) {
                         console.log(err.red);
                     } else if (opt.verbose) {
