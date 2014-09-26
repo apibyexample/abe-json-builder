@@ -98,3 +98,22 @@ To execute you would then need to run
 ``node createFeeds.js``
 
 A suggestion would be to add this to your ``package.json`` as a script command.
+
+### Callbacks
+
+If you'd like to fire a callback on completion, you can pass a function as a
+second argument like so:
+
+```js
+var createFeeds = require('abe-json-builder'),
+    callback = function () {
+        console.log('I am called on complete');
+    },
+    options = {
+        'verbose': false,
+        'location': 'myApp/mocks/**/*',
+        'build': 'www/dist/json/'
+    };
+
+createFeeds.jsonBuilder(options, callback);
+```
