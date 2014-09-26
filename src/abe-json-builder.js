@@ -14,7 +14,7 @@ var colors = require('colours'),
         'build': 'tmp/'
     };
 
-exports.jsonBuilder = function (options) {
+exports.jsonBuilder = function (options, callback) {
     lodash.merge(opt, options);
 
     glob
@@ -37,7 +37,7 @@ exports.jsonBuilder = function (options) {
 
             if (!fs.existsSync(filePath)) {
                 mkdirp(filePath, function (err) {
-                    if (err) {
+                    if (!lodash.isUndefined(err)) {
                         console.log(err.red);
                     } else if (opt.verbose) {
                         console.log(opt.build.yellow, ' created.');
@@ -53,7 +53,7 @@ exports.jsonBuilder = function (options) {
                     file = buildName + baseName + '-' + key + '.json';
 
                 fs.writeFile(filePath + file, fileData, function (err) {
-                    if (err) {
+                    if (!lodash.isUndefined(err)) {
                         console.log(err.red);
                     } else if (opt.verbose) {
                         console.log(file.green, ' file was saved.');
@@ -62,4 +62,8 @@ exports.jsonBuilder = function (options) {
             });
 
         });
+
+    if (lodash.isFunction(callback)) {
+        callback();
+    }
 };
