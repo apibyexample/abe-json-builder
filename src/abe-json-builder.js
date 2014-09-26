@@ -37,8 +37,8 @@ exports.jsonBuilder = function (options, callback) {
 
             if (!fs.existsSync(filePath)) {
                 mkdirp(filePath, function (err) {
-                    if (!lodash.isUndefined(err)) {
-                        console.log(err.red);
+                    if (err) {
+                        console.log(err);
                     } else if (opt.verbose) {
                         console.log(opt.build.yellow, ' created.');
                     }
@@ -53,8 +53,8 @@ exports.jsonBuilder = function (options, callback) {
                     file = buildName + baseName + '-' + key + '.json';
 
                 fs.writeFile(filePath + file, fileData, function (err) {
-                    if (!lodash.isUndefined(err)) {
-                        console.log(err.red);
+                    if (err) {
+                        console.log(err);
                     } else if (opt.verbose) {
                         console.log(file.green, ' file was saved.');
                     }
