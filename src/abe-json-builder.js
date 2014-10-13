@@ -1,10 +1,8 @@
-var colors = require('colours'),
-    fs = require('fs'),
+var fs = require('fs'),
     glob = require('glob'),
     lodash = require('lodash-node'),
     mkdirp = require('mkdirp'),
     path = require('path'),
-    util = require('util'),
     errors = {
         'NOT_ABE': 'This file is an invalid ABE JSON format'
     },
@@ -43,7 +41,7 @@ exports.jsonBuilder = function (options, callback) {
             // JSON file
             lodash.forEach(json.examples, function (obj, key) {
                 var data = JSON.stringify(json
-                        .examples[key].response.body, null, 4)
+                        .examples[key].response.body, null, 4),
                     file = buildName + baseName + '-' + key + '.json',
                     filePath = path.join(folderPath, file);
 
